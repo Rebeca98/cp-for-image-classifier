@@ -1,3 +1,6 @@
 [submodule "dev"]
 	path = dev
 	url = https://bitbucket.org/conabio_cmd/conabio_ml_vision/src/dev/
+[submodule "conformal_classification"]
+	path = conformal_classification
+	url = git@github.com:Rebeca98/conformal_classification.git
