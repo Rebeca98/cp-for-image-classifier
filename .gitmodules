@@ -1,0 +1,3 @@
+[submodule "dev"]
+	path = dev
+	url = https://bitbucket.org/conabio_cmd/conabio_ml_vision/src/dev/
