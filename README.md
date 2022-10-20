@@ -1,5 +1,5 @@
 # Proyect structure
-
+```
 |-- LICENSE
 |-- Makefile
 |-- README.md
@@ -28,4 +28,4 @@
 |	|-- utils.py		<- Script with functions used in other scripts.
 |
 |__ requierements.txt	<- The requirements file for reproducing the analysis environment, e.g. generated with `pip freeze > requirements.txt`
-
+```
