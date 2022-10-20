@@ -27,5 +27,6 @@
 |	|-- inference.py	<- Script to test predictions of image classifier model
 |	|-- utils.py		<- Script with functions used in other scripts.
 |
+|-- params.yaml   <- This file contains model's parameters for testing, directories or information that we may do not want to be tracked for reproducibility.
 |__ requierements.txt	<- The requirements file for reproducing the analysis environment, e.g. generated with `pip freeze > requirements.txt`
 ```
