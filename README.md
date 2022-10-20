@@ -12,8 +12,7 @@
 |
 |-- notebooks			<- Jupyter notebooks. Naming convention is a number (for ordering), and a short `-` delimited description, e.g. `1.0-image-analysis`.
 |
-|-- reports				<- Generated analysis as Markdown.
-|	|__ figures			<- Generated graphics and figures to be used in reporting
+|-- output				<- Models outputs
 |
 |-- setup.py			<- Make this project pip installable with `pip install -e`
 |-- src					<- Source code for use int his project.
