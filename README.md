@@ -31,3 +31,5 @@
 |-- params.yaml   <- This file contains model's parameters for testing, directories or information that we may do not want to be tracked for reproducibility.
 |__ requierements.txt	<- The requirements file for reproducing the analysis environment, e.g. generated with `pip freeze > requirements.txt`
 ```
+# use of parser and yaml file 
+> python train.py -e epochs_20 -lr lr_01
