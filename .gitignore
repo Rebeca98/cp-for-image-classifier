@@ -1,8 +1,7 @@
 .DS_Store
 params.yaml
 src/models/paths.py
-data/processed/calibration
-data/processed/train
+*.jpg
 data/raw
 .ipynb_checkpoints
 *.pth
