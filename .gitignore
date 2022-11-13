@@ -5,6 +5,8 @@ src/models/paths.py
 data/raw
 .ipynb_checkpoints
 *.pth
+*.png
+*.csv
 __pycache__/
 
 .env
