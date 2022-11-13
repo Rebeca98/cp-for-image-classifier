@@ -26,10 +26,25 @@
 |	      |-- datasets.py		<- Script to transform data and create dataloader used in models.	
 |	      |-- train.py		<- Script to train image classifier
 |	      |-- inference.py	<- Script to test predictions of image classifier model
-|	      |__ utils.py		<- Script with functions used in other scripts.
+|	      |__ utils.py		<- Script with functions used in other scripts (small functions to build bigger things with)
 |
 |-- params.yaml   <- This file contains model's parameters for testing, directories or information that we may do not want to be tracked for reproducibility.
 |__ requierements.txt	<- The requirements file for reproducing the analysis environment, e.g. generated with `pip freeze > requirements.txt`
 ```
 # use of parser and yaml file 
 > python train.py -e epochs_20 -lr lr_01
+
+# model metadata file (json)
+```
+{
+    "models": {
+        "model-1": {
+            "file": "model-1.pth",
+            "architecture": "efficientnet_b0",
+            "path": "path/to/trained/model"
+        }
+    },
+    "image_size": 240,
+    "num_classes": 20
+}
+```
