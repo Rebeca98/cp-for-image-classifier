@@ -1,0 +1,11 @@
+{
+    "models": {
+        "model": {
+            "file": "model.pth",
+            "architecture": "efficientnet_b0",
+            "path": "/Users/rebecaangulorojas/Desktop/TESIS/cp-for-image-classifier/models"
+        }
+    },
+    "image_size": 580,
+    "num_classes": 14
+}

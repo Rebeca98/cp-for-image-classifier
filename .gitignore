@@ -1,12 +1,17 @@
 .DS_Store
 params.yaml
-src/models/paths.py
+paths.py
 *.jpg
 data/raw
+data/files
+data/processed
+output
+plots-and-tables
 .ipynb_checkpoints
 *.pth
 *.png
 *.csv
+
 __pycache__/
 
 .env
