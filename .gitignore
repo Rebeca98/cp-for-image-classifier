@@ -1,7 +1,7 @@
 .DS_Store
 params.yaml
-paths.py
 *.jpg
+*.JPG
 data/raw
 data/files
 data/processed
@@ -11,6 +11,7 @@ plots-and-tables
 *.pth
 *.png
 *.csv
+*.zip
 
 __pycache__/
 
