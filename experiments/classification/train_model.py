@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 import time
 from tqdm.auto import tqdm
-from paths import TRAIN_DIR,TEST_DIR,OUTPUT_DIR,MODEL_PATH
+from paths import TRAIN_DIR,VAL_DIR,OUTPUT_DIR,MODEL_PATH
 import argparse, configparser
 import pandas as pd
 from pathlib import Path
@@ -23,9 +23,9 @@ if __name__ == '__main__':
     
     # Computation device
     # mps
-    device = ('mps' if torch.backends.mps.is_available() & torch.backends.mps.is_built() else 'cpu') 
+    #device = ('mps' if torch.backends.mps.is_available() & torch.backends.mps.is_built() else 'cpu') 
     #nvidia
-    #device = ('cuda' if torch.cuda.is_available() else 'cpu') 
+    device = ('cuda' if torch.cuda.is_available() else 'cpu') 
     print(f"Computation device: {device}")
     
     # get the start time
@@ -59,7 +59,7 @@ if __name__ == '__main__':
     
     torch.manual_seed(seed)
     # Load the training and validation dataloaders.
-    train_loader, valid_loader, dataset_classes = get_model_dataloaders(batch_size,TRAIN_DIR,TEST_DIR,image_size)
+    train_loader, valid_loader, dataset_classes = get_model_dataloaders(batch_size,TRAIN_DIR,VAL_DIR,image_size)
     print(f"[INFO]: Class names: {dataset_classes}\n")
 
     # Build model
@@ -112,11 +112,11 @@ if __name__ == '__main__':
         valid_loss.append(valid_epoch_loss)
         train_acc.append(train_epoch_acc)
         valid_acc.append(valid_epoch_acc)
-        print(
-            f"Training loss: {train_epoch_loss:.3f}, training acc: {train_epoch_acc:.3f}")
-        print(
-            f"Validation loss: {valid_epoch_loss:.3f}, validation acc: {valid_epoch_acc:.3f}")
-        print('-'*50)
+        #print(
+        #    f"Training loss: {train_epoch_loss:.3f}, training acc: {train_epoch_acc:.3f}")
+        #print(
+        #    f"Validation loss: {valid_epoch_loss:.3f}, validation acc: {valid_epoch_acc:.3f}")
+        #print('-'*50)
         if early_stopper.early_stop(valid_epoch_loss):
             print(f"[INFO]: EarlyStopping")             
             break
