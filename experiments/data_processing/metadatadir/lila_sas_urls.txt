@@ -1,0 +1,20 @@
+# name,image_base_url,metadata_url,bbox_url
+Caltech Camera Traps,https://lilablobssc.blob.core.windows.net/caltech-unzipped/cct_images,https://lilablobssc.blob.core.windows.net/caltechcameratraps/labels/caltech_camera_traps.json.zip,https://lilablobssc.blob.core.windows.net/caltechcameratraps/labels/caltech_bboxes_20200316.json
+ENA24,https://lilablobssc.blob.core.windows.net/ena24/images,https://lilablobssc.blob.core.windows.net/ena24/ena24.json,
+Missouri Camera Traps,https://lilablobssc.blob.core.windows.net/missouricameratraps/images,https://lilablobssc.blob.core.windows.net/missouricameratraps/missouri_camera_traps.json.zip,
+NACTI,https://lilablobssc.blob.core.windows.net/nacti-unzipped,https://lilablobssc.blob.core.windows.net/nacti/nacti_metadata.json.zip,https://lilablobssc.blob.core.windows.net/nacti/nacti_20200401_bboxes.json.zip
+WCS Camera Traps,https://lilablobssc.blob.core.windows.net/wcs-unzipped,https://lilablobssc.blob.core.windows.net/wcs/wcs_camera_traps.json.zip,https://lilablobssc.blob.core.windows.net/wcs/wcs_20200403_bboxes.json.zip
+Wellington Camera Traps,https://lilablobssc.blob.core.windows.net/wellington-unzipped/images,https://lilablobssc.blob.core.windows.net/wellingtoncameratraps/wellington_camera_traps.json.zip,
+Island Conservation Camera Traps,https://lilablobssc.blob.core.windows.net/islandconservationcameratraps/public,https://lilablobssc.blob.core.windows.net/islandconservationcameratraps/island_conservation.json.zip,
+Channel Islands Camera Traps,https://lilablobssc.blob.core.windows.net/channel-islands-camera-traps/images,https://lilablobssc.blob.core.windows.net/channel-islands-camera-traps/channel-islands-camera-traps.json.zip,
+Idaho Camera Traps,https://lilablobssc.blob.core.windows.net/idaho-camera-traps/public,https://lilablobssc.blob.core.windows.net/idaho-camera-traps/idaho-camera-traps.json.zip,
+Snapshot Serengeti,https://lilablobssc.blob.core.windows.net/snapshotserengeti-unzipped,https://lilablobssc.blob.core.windows.net/snapshotserengeti-v-2-0/SnapshotSerengeti_S1-11_v2_1.json.zip,https://lilablobssc.blob.core.windows.net/snapshotserengeti-v-2-0/SnapshotSerengetiBboxes_20190903.json.zip
+Snapshot Karoo,https://lilablobssc.blob.core.windows.net/snapshot-safari/KAR/KAR_public,https://lilablobssc.blob.core.windows.net/snapshot-safari/KAR/SnapshotKaroo_S1_v1.0.json.zip,
+Snapshot Kgalagadi,https://lilablobssc.blob.core.windows.net/snapshot-safari/KGA/KGA_public,https://lilablobssc.blob.core.windows.net/snapshot-safari/KGA/SnapshotKgalagadi_S1_v1.0.json.zip,
+Snapshot Enonkishu,https://lilablobssc.blob.core.windows.net/snapshot-safari/ENO/ENO_public,https://lilablobssc.blob.core.windows.net/snapshot-safari/ENO/SnapshotEnonkishu_S1_v1.0.json.zip,
+Snapshot Camdeboo,https://lilablobssc.blob.core.windows.net/snapshot-safari/CDB/CDB_public,https://lilablobssc.blob.core.windows.net/snapshot-safari/CDB/SnapshotCamdeboo_S1_v1.0.json.zip,
+Snapshot Mountain Zebra,https://lilablobssc.blob.core.windows.net/snapshot-safari/MTZ/MTZ_public,https://lilablobssc.blob.core.windows.net/snapshot-safari/MTZ/SnapshotMountainZebra_S1_v1.0.json.zip,
+Snapshot Kruger,https://lilablobssc.blob.core.windows.net/snapshot-safari/KRU/KRU_public,https://lilablobssc.blob.core.windows.net/snapshot-safari/KRU/SnapshotKruger_S1_v1.0.json.zip,
+SWG Camera Traps,https://lilablobssc.blob.core.windows.net/swg-camera-traps,https://lilablobssc.blob.core.windows.net/swg-camera-traps/swg_camera_traps.zip,https://lilablobssc.blob.core.windows.net/swg-camera-traps/swg_camera_traps.bounding_boxes.with_species.zip
+Orinoquia Camera Traps,https://lilablobssc.blob.core.windows.net/orinoquia-camera-traps/public,https://lilablobssc.blob.core.windows.net/orinoquia-camera-traps/orinoquia_camera_traps_metadata.zip,
+
