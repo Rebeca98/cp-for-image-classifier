@@ -5,6 +5,7 @@ from torchvision import transforms, datasets
 from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
 import torchvision.transforms.functional as TF
+from torch.utils.data import DataLoader, Subset
 
 
 class MyEqualizerTransform:
@@ -69,7 +70,7 @@ def get_calib_transform(image_size):
     return transform
 
 
-def get_model_dataloaders(batch_size,train_dir,test_dir,image_size):
+def get_model_dataloaders(batch_size,train_dir,validation_dir,image_size):
     """
     Function that return dataloaders for train and validation sets.
 
@@ -89,7 +90,7 @@ def get_model_dataloaders(batch_size,train_dir,test_dir,image_size):
         transform=(get_train_transform(image_size))
     )
     test_dataset = datasets.ImageFolder(
-        test_dir,
+        validation_dir,
         transform=(get_train_transform(image_size))
     )
     print(f"[INFO]: Number of training images: {len( train_dataset)}")
@@ -107,7 +108,7 @@ def get_model_dataloaders(batch_size,train_dir,test_dir,image_size):
     return train_loader, test_loader, train_dataset.classes
 
 
-def get_model_dataloaders_evaluation(batch_size,validation_dir,image_size):
+def get_model_dataloaders_evaluation(batch_size,test_dir,image_size,**kwargs):
     """
     Function that return dataloaders for train and validation sets.
 
@@ -123,11 +124,21 @@ def get_model_dataloaders_evaluation(batch_size,validation_dir,image_size):
     with the class names.
     """
     validation_dataset = datasets.ImageFolder(
-        validation_dir,
+        test_dir,
         transform=(get_validation_transform(image_size))
     )
+    subset = kwargs.get('subset', False)
+    if subset:
+        import random
+        subset_indices = random.sample(range(len(validation_dataset)), 2000)
+        #subset_indices = list(range(100))  # Indices 0 to 99 (inclusive)
+        subset = Subset(validation_dataset, subset_indices)
+        validation_loader = DataLoader(subset,
+                              batch_size=batch_size, shuffle=True
+                              )
+        return validation_loader, validation_dataset.classes
     
-    print(f"[INFO]: Number of validation images: {len(validation_dataset)}")
+    print(f"[INFO]: Number of validation images: {len(test_dir)}")
 
     # dataloaders
     validation_loader = DataLoader(validation_dataset,

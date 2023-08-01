@@ -109,7 +109,7 @@ def get_model(architecture,model_name,pretrained):
     """
     efficientnet_models = ['efficientnet_b0','efficientnet_b1','efficientnet_b2']
 
-    if architecture in efficientnet_models:
+    if model_name in efficientnet_models:
         if model_name == 'efficientnet_b0':
             model = models.efficientnet_b0(weights='EfficientNet_B0_Weights.DEFAULT',
                                         pretrained=pretrained,

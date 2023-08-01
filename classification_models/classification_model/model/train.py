@@ -50,7 +50,7 @@ def train(model, trainloader, optimizer, criterion,device):
         # Calculate the loss.
         loss = criterion(outputs, labels)
         train_running_loss += loss.item()
-        print("train_running_loss",train_running_loss)
+        #print("train_running_loss",train_running_loss)
         # Calculate the accuracy.
         _, preds = torch.max(outputs.data, 1)
         train_running_correct += (preds == labels).sum().item()
