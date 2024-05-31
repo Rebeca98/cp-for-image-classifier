@@ -125,12 +125,17 @@ if __name__ == '__main__':
     # get the end time
     et = time.time()
     # get the execution time
-    elapsed_time = et - st
-    print('Execution time:', elapsed_time, 'seconds')
+    training_time = et - st
+    print('Execution time:', training_time, 'seconds')
     
     # Save the trained model weights.
-    save_model(model, epochs, optimizer, criterion,OUTPUT_DIR,config_file_name)
-    
+    save_model(model=model, 
+               epochs=epochs, 
+               optimizer = optimizer, 
+               criterion=criterion,
+               training_time = training_time,
+               dir_path = OUTPUT_DIR,
+               config_file_name = config_file_name)
     # Save the loss and accuracy plots.
 
     save_plots(train_acc, valid_acc, train_loss, valid_loss,OUTPUT_DIR,config_file_name)

@@ -7,7 +7,25 @@ import pandas as pd
 # debemos de suponer que mis datos de testing vienen de la misma distribucion
 IMAGE_SIZE = 580
 BATCH_SIZE = 32
-NUM_WORKERS = 0
+
+
+def _get_model_info(train_model_path):
+    # Cargar el modelo y los datos guardados
+    checkpoint = torch.load(train_model_path)
+
+    # Acceder a los valores guardados
+    epochs = checkpoint['epoch']
+    model_state_dict = checkpoint['model_state_dict']
+    optimizer_state_dict = checkpoint['optimizer_state_dict']
+    loss = checkpoint['loss']
+    training_time = checkpoint['training_time_seconds']  # Acceder al tiempo de entrenamiento
+
+    # Luego puedes imprimir o utilizar estos valores según tus necesidades
+    print(f'Epochs: {epochs}')
+    print(f'Model State Dictionary: {model_state_dict}')
+    print(f'Optimizer State Dictionary: {optimizer_state_dict}')
+    print(f'Loss: {loss}')
+    print(f'Training Time (seconds): {training_time}')
 
 def _get_confusion_matrix(preds,target,num_classes,dataset_classes,device):
     
@@ -35,7 +53,7 @@ def _get_metrics(preds, target,num_classes,device):
     recall_score = recall(preds, target).item()
     accuracy = Accuracy(task="multiclass", num_classes=num_classes).to(device)
     accuracy_score = accuracy(preds, target).item()
-    f1 = F1Score(task="multiclass", num_classes=num_classes).to(device)
+    f1 = F1Score(task="multiclass", num_classes=num_classes, average='macro').to(device)
     f1_score = f1(preds, target).item()
     return precision_score, recall_score, accuracy_score, f1_score
 

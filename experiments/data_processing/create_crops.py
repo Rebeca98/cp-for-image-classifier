@@ -38,7 +38,7 @@ if __name__ == "__main__":
     if args.create_lila_dataset_crops:
         lila_ds = LILADataset.from_csv(lila_dataset_csv, images_dir=lila_images_dir,not_exist_ok=True) #fix de JC
         crops_ds = lila_ds.create_classif_ds_from_bboxes_crops(
-            dest_path=lila_crops_dir,
+            dest_path=lila_crops_ds_csv,
             force_crops_creation=True,
             not_exist_ok=True)
         crops_ds.to_csv(lila_crops_ds_csv)

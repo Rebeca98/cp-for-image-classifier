@@ -4,7 +4,3 @@
 [submodule "conformal_classification"]
 	path = conformal_classification
 	url = git@github.com:Rebeca98/conformal_classification.git
-[submodule "conabio_ml_vision"]
-	path = conabio_ml_vision
-	url = https://bitbucket.org/conabio_cmd/conabio_ml_vision.git
-	branch = dev

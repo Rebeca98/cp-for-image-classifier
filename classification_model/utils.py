@@ -17,6 +17,7 @@ def save_model(model,
                epochs, 
                optimizer, 
                criterion, 
+               training_time,
                dir_path,
                config_file_name):
 
@@ -42,6 +43,7 @@ def save_model(model,
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': optimizer.state_dict(),
         'loss': criterion,
+        'training_time_seconds': training_time  # Save training time
     }, os.path.join(directory,"trained.pth"))
 #torch.save(trained_model.state_dict(), 'trained.pth')
 
