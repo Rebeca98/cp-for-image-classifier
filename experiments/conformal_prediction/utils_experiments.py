@@ -1,5 +1,6 @@
 import pandas as pd
 from tqdm import tqdm
+import random
 import itertools
 # Torch
 import torch
@@ -7,12 +8,13 @@ import time
 import numpy as np
 import os
 
-from conformal_classification.utils import get_calib_transform 
+from conformal_classification.utils import get_calib_transform , build_model_for_cp
 from conformal_classification.evaluate import get_logits_model
 from conformal_classification.evaluate import evaluate_trials
 from typing import List,Optional
 from conformal_classification.evaluate import get_logits_model
 from conformal_classification.evaluate import get_logits
+from conformal_classification.evaluate import cp_inference
 
 #device = ('cuda' if torch.cuda.is_available() else 'cpu')
 #device = ('mps' if torch.backends.mps.is_available() & torch.backends.mps.is_built() else 'cpu')
@@ -26,6 +28,8 @@ from conformal_classification.evaluate import get_logits
 # 1) Set sizes for all test-time examples.
 # 2) topk for each example, where topk means which score was correct.
 
+
+    
 
 def evaluation_table(modelnames:list,predictors:list, num_classes:int,image_size:int,  model_info:dict,
                     data_path_calibration:str,data_path_test:str, bsz:int, alphas:List[float], kregs:List[int],lamdas:List[float],
